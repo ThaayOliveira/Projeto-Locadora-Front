@@ -10,6 +10,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { getItens } from "../features/itens/api/get-itens"
 import { useCarrinho } from "../contexts/carrinho-context"
+import { Footer } from "../components/footer"
 
 
 export default function CarrinhoPage() {
@@ -65,7 +66,6 @@ export default function CarrinhoPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
-      {/* Header */}
       <header className="bg-gradient-to-r from-amber-800 via-orange-700 to-red-800 text-white shadow-lg">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
@@ -100,7 +100,6 @@ export default function CarrinhoPage() {
 
       <div className="container mx-auto px-4 py-8">
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Lista de Filmes Disponíveis */}
           <div className="lg:col-span-2">
             <Card className="border-2 border-amber-300 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-amber-100 to-orange-100">
@@ -262,7 +261,7 @@ export default function CarrinhoPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-amber-300 shadow-lg mt-6">
+            {/* <Card className="border-2 border-amber-300 shadow-lg mt-6">
               <CardHeader className="bg-gradient-to-r from-amber-100 to-orange-100">
                 <CardTitle className="text-lg text-amber-900 flex items-center">
                   <MapPin className="w-5 h-5 mr-2" />
@@ -285,10 +284,13 @@ export default function CarrinhoPage() {
                   </div>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
+
       </div>
+
+      <Footer/>
     </div>
   )
 }
