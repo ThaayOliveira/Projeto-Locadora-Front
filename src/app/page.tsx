@@ -136,7 +136,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <Badge className="mb-6 bg-amber-200 hover:bg-amber-200 text-amber-900 text-lg px-4 py-2 font-bold border border-amber-300">
             <Zap className="w-5 h-5 mr-2" />
-            DESDE 1985 - TRADIÇÃO EM FILMES
+            DESDE 1986 - TRADIÇÃO EM FILMES
           </Badge>
 
           <h2 className="text-5xl md:text-7xl font-black mb-6 text-shadow-lg">
@@ -441,7 +441,7 @@ export default function Home() {
               </div>
               <div>
                 <div className="font-bold text-lg text-amber-100">AVISE FILMES</div>
-                <div className="text-amber-300 text-sm">Desde 1985 • A tradição continua</div>
+                <div className="text-amber-300 text-sm">Desde 1986 • A tradição continua</div>
               </div>
             </div>
             <div className="text-center md:text-right text-amber-200">

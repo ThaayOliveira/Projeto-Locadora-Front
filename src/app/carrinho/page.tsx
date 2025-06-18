@@ -9,19 +9,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { getItens } from "../features/itens/api/get-itens"
-import { useCarrinho } from "@/app/contexts/carrinho-context"
+import { useCarrinho } from "../contexts/carrinho-context"
 
-// Carrinho de filmes
-
-interface Item {
-  id: number
-  titulo: string
-  genero: string
-  precoDiario: number
-  tipo: "DVD" | "BLU_RAY" | "JOGO" | "VHS"
-  status: "DISPONIVEL" | "ALUGADO" | "MANUTENCAO"
-  imagemUrl: string
-}
 
 export default function CarrinhoPage() {
   const { itens, removerItem, limparCarrinho, calcularTotal, adicionarItem } = useCarrinho()
@@ -34,8 +23,6 @@ export default function CarrinhoPage() {
         setLoading(true)
         const dados = await getItens()
         setTodosItens(dados)
-      } catch (err) {
-        console.error("Erro ao carregar itens:", err)
       } finally {
         setLoading(false)
       }
@@ -78,6 +65,7 @@ export default function CarrinhoPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
+      {/* Header */}
       <header className="bg-gradient-to-r from-amber-800 via-orange-700 to-red-800 text-white shadow-lg">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
@@ -253,13 +241,12 @@ export default function CarrinhoPage() {
                       </div>
 
                       <div className="space-y-2">
-                        <Button
-                          className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3"
-                          size="lg"
-                        >
-                          <CreditCard className="w-4 h-4 mr-2" />
-                          FINALIZAR ALUGUEL
-                        </Button>
+                        <Link href="/checkout">
+                          <Button className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 text-lg">
+                            <CreditCard className="w-4 h-4 mr-2" />
+                            FINALIZAR ALUGUEL
+                          </Button>
+                        </Link>
                         <Button
                           variant="outline"
                           className="w-full border-red-300 text-red-600 hover:bg-red-50"
@@ -275,7 +262,6 @@ export default function CarrinhoPage() {
               </CardContent>
             </Card>
 
-            {/* Informações da Loja */}
             <Card className="border-2 border-amber-300 shadow-lg mt-6">
               <CardHeader className="bg-gradient-to-r from-amber-100 to-orange-100">
                 <CardTitle className="text-lg text-amber-900 flex items-center">
