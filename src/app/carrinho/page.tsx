@@ -10,7 +10,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { getItens } from "../features/itens/api/get-itens"
 import { useCarrinho } from "../contexts/carrinho-context"
-import { Footer } from "../components/footer"
+import { Footer } from "../features/itens/components/footer"
 
 
 export default function CarrinhoPage() {

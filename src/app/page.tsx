@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react"
 import { getItens } from "./features/itens/api/get-itens"
 import { useCarrinho } from "./contexts/carrinho-context"
-import { PricingTable } from "./components/pricing-table"
-import { MoviesCatalog } from "./components/movies-catalog"
-import { ServicesSection } from "./components/services-section"
-import { ContactSection } from "./components/contact"
-import { Footer } from "./components/footer"
-import { Header } from "./components/header"
-import { NavBar } from "./components/navbar"
+import { PricingTable } from "./features/itens/components/pricing-table"
+import { MoviesCatalog } from "./features/itens/components/movies-catalog"
+import { ServicesSection } from "./features/itens/components/services-section"
+import { ContactSection } from "./features/itens/components/contact"
+import { Footer } from "./features/itens/components/footer"
+import { Header } from "./features/itens/components/header"
+import { NavBar } from "./features/itens/components/navbar"
 
 export default function Home() {
   const [itens, setItens] = useState<Item[]>([])

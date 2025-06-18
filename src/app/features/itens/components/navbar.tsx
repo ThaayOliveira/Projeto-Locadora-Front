@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Film, Clock, Phone, ShoppingCart } from "lucide-react"
 import Link from "next/link"
-import { useCarrinho } from "../contexts/carrinho-context"
+import { useCarrinho } from "../../../contexts/carrinho-context"
 export function NavBar() {
   const { calcularTotalItens } = useCarrinho()
 
