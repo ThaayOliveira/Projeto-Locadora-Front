@@ -8,7 +8,7 @@ import { AlugueisProvider } from "./contexts/alugueis-context"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Avise Filmes - Locadora",
+  title: "CinePipoca - Locadora",
   description: "A maior locadora da região desde 1985",
 }
 
