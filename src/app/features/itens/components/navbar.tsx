@@ -17,7 +17,7 @@ export function NavBar() {
               <Film className="w-8 h-8 text-amber-100" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold tracking-wide text-amber-100">AVISE FILMES</h1>
+              <h1 className="text-2xl font-bold tracking-wide text-amber-100">CINEPIPOCA</h1>
               <p className="text-sm text-amber-200">CINE FILMES</p>
             </div>
           </div>

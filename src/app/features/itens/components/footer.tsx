@@ -12,12 +12,12 @@ export function Footer() {
               <Film className="w-6 h-6 text-amber-200" />
             </div>
             <div>
-              <div className="font-bold text-lg text-amber-100">AVISE FILMES</div>
+              <div className="font-bold text-lg text-amber-100">CINEPIPOCA</div>
               <div className="text-amber-300 text-sm">Desde 1986 • A tradição continua</div>
             </div>
           </div>
           <div className="text-center md:text-right text-amber-200">
-            <p>&copy; 2024 Avise Filmes. Todos os direitos reservados.</p>
+            <p>&copy; 2024 CINEPIPOCA. Todos os direitos reservados.</p>
             <p className="text-sm text-amber-300">Diversão garantida para toda família!</p>
           </div>
         </div>
